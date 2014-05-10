@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tinymeeting
+Bundle-SymbolicName: com.nsn.tinymeeting; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.nsn.tinymeeting.Activator
+Bundle-Vendor: NSN
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.nsn.lib.pushserver;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-NativeCode: /lib/jmacm.dll,/lib/jmam.dll,/lib/jmcvid.dll,/lib/jmdaud.dll,/lib/jmdaudc.dll,/lib/jmddraw.dll,/lib/jmfjawt.dll,/lib/jmg723.dll,/lib/jmgdi.dll,/lib/jmgsm.dll,/lib/jmh261.dll,/lib/jmh263enc.dll,/lib/jmjpeg.dll,/lib/jmmci.dll,/lib/jmmpa.dll,/lib/jmmpegv.dll,/lib/jmutil.dll,/lib/jmvcm.dll,/lib/jmvfw.dll,/lib/jmvh263.dll,/lib/jsound.dll
+Bundle-ClassPath: lib/customizer.jar,
+ lib/jmf.jar,
+ lib/mediaplayer.jar,
+ lib/multiplayer.jar,
+ lib/sound.jar,
+ .

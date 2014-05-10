@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.nsn.tinymeeting.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Perspective"
+            class="com.nsn.tinymeeting.Perspective"
+            id="com.nsn.tinymeeting.perspective">
+      </perspective>
+   </extension>
+   <extension point="org.eclipse.ui.perspectiveExtensions">
+          <perspectiveExtension targetID="com.nsn.tinymeeting.perspective">
+             <view  id="com.nsn.tinymeeting.alllistplayview"
+                relative="org.eclipse.ui.editorss"         
+                relationship="left"           
+                ratio="0.7"
+               closeable="false"/>
+
+            <view  id="com.nsn.tinymeeting.selfplayview"
+                relative="org.eclipse.ui.editorss"
+                relationship="right"
+                ratio="0.3"/>
+
+          <view  id="com.nsn.tinymeeting.alllistview"
+                relative="com.nsn.tinymeeting.selfplayview"
+                relationship="bottom"
+                ratio="0.5"
+                closeable="false"/>
+
+    	</perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="alllistplayview"
+            class="com.nsn.tinymeeting.AllListPlayView"
+            id="com.nsn.tinymeeting.alllistplayview">
+      </view>
+      <view
+            class="com.nsn.tinymeeting.AllListView"
+            id="com.nsn.tinymeeting.alllistview"
+            name="alllistview">
+      </view>
+      <view
+            class="com.nsn.tinymeeting.SelfPlayView"
+            id="com.nsn.tinymeeting.selfplayview"
+            name="selfplayview">
+      </view>
+   </extension>
+</plugin>
